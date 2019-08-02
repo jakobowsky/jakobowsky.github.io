@@ -1,12 +1,15 @@
 # Site settings
 title: Knowlitz Company
-email:
+email1: jakob.wolitzki@knowlitz.com
+email2: wojciech.norek@knowlitz.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
 
 twitter_username:
+facebook_username: knowlitz
 github_username: jakobowsky
+instagram_username: knowlitz
 
 # Build settings
 markdown: kramdown

@@ -155,7 +155,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header_ai.jpg');
     text-align: center;
     color: white;
     .header-content {
@@ -292,6 +292,7 @@ header {
 .no-gutter > [class*='col-'] {
     padding-right:0;
     padding-left:0;
+    background-color: #232323;
 }
 
 // Button Styles

@@ -6,35 +6,85 @@
                 <hr class="primary">
                 <p>Chcesz zacząć z nami projekt? Zadzwoń do nas lub napisz maila. Zapraszamy również do kontaktu w social media.</p>
             </div>
-        <div class="col-lg-2 col-lg-offset-2 text-center">
+        </div>
+        <div class="col-lg-3 col-lg-offset-2 text-center">
             <!--<a href="https://facebook.com/{{ site.facebook_username }}">-->
             <a href="https://www.facebook.com/knowlitz">
                 <i class="fa fa-facebook fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                 <p>fb/knowlitz</p>
             </a>
         </div>
-        <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="mailto:{{ site.email1 }}">
-            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>send email</p>
-            </a>
-        </div>
 
-        <div class="col-lg-2 col-lg-offset-1 text-center">
+        <div class="col-lg-3 col-lg-offset-2 text-center">
             <a href="https://instagram.com/{{ site.instagram_username }}">
                 <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                 <p>ig/knowlitz</p>
             </a>
         </div>
         
-        <form>
+        {% comment %} <form>
         <input id="email" type="text">
         <input id="comment" type="text">
         <button type="button" onclick="handleSubmit()">Send</button>
         </form>
+        <h2 id='result'></h2>
+         {% endcomment %}
 
-        
-	
+        <form id="contact-form" method="post" role="form">
+
+            <div class="messages"></div>
+
+            <div class="controls">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_name">Imię *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Jak masz na imię *" required="required" data-error="Imie jest obowiązkowe.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_email">Email *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Proszę podaj email *" required="required" data-error="Email jest obowiązkowy.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_message">Wiadomość *</label>
+                            <textarea id="form_message" name="message" class="form-control" placeholder="Jak możemy Ci pomóc *" rows="4" required="required" data-error="Proszę, zostaw wiadomość."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="button" onclick="handleSubmit()" class="btn btn-success btn-send" value="Wyślij wiadomość">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted">
+                            <strong id='result'></strong> 
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
         <script src="js/email.js"></script>
         
         <!--
